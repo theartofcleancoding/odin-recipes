@@ -1,0 +1,61 @@
+* {
+    font-family:'Courier New', Courier, monospace
+}
+
+body {
+    background-image: url('./images/odinrecipeindexbackground.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 40px;
+    margin-top: 5%;
+    margin-left: 5%;
+    animation: infinite 60s;
+    background: rgba(255,255,255,.8);
+    text-align: center;
+    color: #040404;
+    border-radius: 15%;
+    /* Animation property */
+    animation: wiggle 30ms linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-1deg);
+    }
+    20% {
+      transform: rotateZ(3deg);
+    }
+    25% {
+      transform: rotateZ(0deg);
+    }
+    30% {
+      transform: rotateZ(2deg);
+    }
+    35% {
+      transform: rotateZ(0deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+
+ul>li {
+    list-style: none;
+}
+
+li>a {
+    text-decoration: none;
+}
+
