@@ -1,61 +1,162 @@
-* {
-    font-family:'Courier New', Courier, monospace
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Grenze+Gotisch:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    max-width: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-image: url('./images/odinrecipeindexbackground.png');
+    /*min-height: calc((1vw + 1vh) * 75);*/
+    height: 100%;
+    overflow: hidden;
+    background-image: url('./images/index-background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-.wrapper {
+.body-wrapper.paper-background {
+    background-image: url(./images/paper-brackground.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    padding: 40px;
-    margin-top: 5%;
-    margin-left: 5%;
-    animation: infinite 60s;
-    background: rgba(255,255,255,.8);
-    text-align: center;
-    color: #040404;
-    border-radius: 15%;
-    /* Animation property */
-    animation: wiggle 30ms linear infinite;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* Keyframes */
-@keyframes wiggle {
-    0%, 7% {
-      transform: rotateZ(0);
-    }
-    15% {
-      transform: rotateZ(-1deg);
-    }
-    20% {
-      transform: rotateZ(3deg);
-    }
-    25% {
-      transform: rotateZ(0deg);
-    }
-    30% {
-      transform: rotateZ(2deg);
-    }
-    35% {
-      transform: rotateZ(0deg);
-    }
-    40%, 100% {
-      transform: rotateZ(0);
-    }
-  }
-  
+header {
+    background-image: url(./images/wrapper-paper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0.5em;
+    box-shadow: 1em 1.5em 1.5em -1em rgba(0, 0, 0, 0.5);
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 0.5em;
+    text-align: center;
+    margin-left: 240px;
+    margin-bottom: 30px;
+
+    font-family: "Almendra SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section {
+    text-align: center;
+    margin-left: 200px;
+
+    font-family: "Grenze Gotisch", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
 
 ul>li {
     list-style: none;
+
+    background-image: url(./images/wrapper-paper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0.5em;
+    margin: 6px;
+    box-shadow: 1em 1.5em 1.5em -1em rgba(0, 0, 0, 0.5);
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 li>a {
     text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    &:link {
+        color: black;
+    }
+    
+    &:visited {
+        color: rgb(134, 132, 138);
+    }
+
+    &:hover {
+        color: black;
+        background-color: rgba(143, 137, 131, 0.3);
+        border-radius: 6px;
+    }
+
+    &:active {
+        color: rgb(5, 5, 4);
+    }
 }
 
+.odin-project-page {
+    background-image: url(./images/wrapper-paper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: fit-content;
+    padding: 2em;
+    box-shadow: 1em 1.5em 1.5em -1em rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+    margin-left: 90px;
+    margin-top: -9%;
+}
+
+.odin-project-page > a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    &:link {
+        color: black;
+    }
+    
+    &:visited {
+        color: rgb(134, 132, 138);
+    }
+
+    &:hover {
+        color: black;
+        background-color: rgba(126, 126, 125, 0.3);
+        padding: 1px;
+        border-radius: 10%;
+    }
+
+    &:active {
+        color: rgb(5, 5, 4);
+    }
+}
+
+footer, .odin-project-page {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+footer > p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+p > a {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    height: 9%;
+    margin-bottom: 0;
+
+    &:link {
+        color: white;
+    }
+    
+    &:visited {
+        color: rgb(166, 164, 168);
+    }
+
+    &:active {
+        color: rgb(252, 252, 242);
+    } 
+}
